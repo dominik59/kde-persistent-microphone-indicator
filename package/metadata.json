@@ -1,0 +1,23 @@
+{
+  "KPlugin": {
+    "Name": "Persistent Microphone Indicator",
+    "Description": "Shows microphone usage in the system tray",
+    "Id": "com.github.dominik59.kde-persistent-microphone-indicator",
+    "Version": "1.0.0",
+    "Category": "System Information",
+    "EnabledByDefault": true,
+    "Icon": "microphone-sensitivity-low-symbolic",
+    "Authors": [
+      {
+        "Name": "Dominik"
+      }
+    ],
+    "License": "GPL-2.0-or-later",
+    "Website": "https://github.com/dominik59/kde-persistent-microphone-indicator",
+    "BugReportUrl": "https://github.com/dominik59/kde-persistent-microphone-indicator/issues"
+  },
+  "KPackageStructure": "Plasma/Applet",
+  "X-Plasma-API-Minimum-Version": "6.0",
+  "X-Plasma-NotificationArea": "true",
+  "X-Plasma-NotificationAreaCategory": "Hardware"
+}
