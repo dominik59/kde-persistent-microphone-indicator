@@ -19,7 +19,6 @@ KCM.SimpleKCM {
                 stepSize: 0.25
                 Layout.preferredWidth: 300
 
-                // Keep the spin box in sync when the slider moves.
                 onValueChanged: spinBox.value = Math.round(value * 100)
             }
 
@@ -35,7 +34,6 @@ KCM.SimpleKCM {
                 textFromValue: function(v) { return (v / 100).toFixed(2) + "×" }
                 valueFromText: function(t) { return Math.round(parseFloat(t) * 100) }
 
-                // Keep the slider in sync when the spin box changes.
                 onValueChanged: slider.value = value / 100
             }
         }
