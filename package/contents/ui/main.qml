@@ -21,6 +21,7 @@ PlasmoidItem {
     property string backendError: ""
     property int activeStreams: sourceOutputInstantiator.count
     property bool debugLogging: true
+    readonly property real iconSizeMultiplier: Plasmoid.configuration.iconSizeMultiplier
 
     readonly property string currentIconName: {
         if (!backendOk) {
@@ -107,8 +108,12 @@ PlasmoidItem {
         implicitHeight: Kirigami.Units.iconSizes.smallMedium
         onClicked: root.expanded = !root.expanded
 
+        // The tray slot size is fixed by the containment — scale the icon
+        // within the slot instead of trying to resize the slot itself.
         Kirigami.Icon {
-            anchors.fill: parent
+            anchors.centerIn: parent
+            width: Kirigami.Units.iconSizes.smallMedium * root.iconSizeMultiplier
+            height: Kirigami.Units.iconSizes.smallMedium * root.iconSizeMultiplier
             source: root.currentIconSource
         }
     }
